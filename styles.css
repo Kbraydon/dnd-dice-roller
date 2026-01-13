@@ -1,0 +1,152 @@
+html {
+    min-height: 100svh;
+    font-family: "Cinzel Decorative", serif;
+    background-image: url(images/diceRollerBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+#header {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    gap: 20px;
+}
+
+.dice{
+    height: 100%;
+    width: 100%;
+}
+
+#mainBody {
+    display: flex;
+    flex-direction: column;
+    margin: clamp(24px, 8vh, 80px) auto;
+    padding: clamp(24px, 6vh, 80px) 0;
+    justify-content: center;
+    width: 90%;
+}
+
+#enabledDice{
+    padding: clamp(16px, 5vw, 50px);
+    margin: auto;
+    height: auto;
+    width: min(70%, 320px);
+}
+
+#enabledDice:hover{
+    opacity: 80%;
+}
+
+#diceRolled {
+    margin: auto;
+    font-size: 5em;
+}
+
+#footer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+#modifierText {
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+}
+
+#buttonModifiers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: auto;
+
+}
+
+.button {
+    font-size: clamp(1rem, 3.5vw, 1.8rem);
+    height: clamp(2.6em, 9vw, 3.2em);
+    width: clamp(2.6em, 9vw, 3.2em);
+    border-width: clamp(2px, 0.6vw, 5px);
+    margin: clamp(10px, 2vw, 20px) 0px;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+}
+
+hr {
+    border: 1% solid black;
+    width: 100%;
+}
+
+#settings {
+    font-size: 30px;
+}
+
+
+
+@media (min-width: 900px) {
+
+  /* Keep content from stretching across the whole desktop */
+  #header,
+  #mainBody,
+  #footer {
+    max-width: 700px;
+    max-height: 100px;
+  }
+
+  /* Less “phone-like” vertical padding on desktop */
+  #mainBody {
+    margin: 200px auto;
+    padding: 40px 0;
+  }
+
+  /* Cap dice size on desktop */
+  #enabledDice {
+    width: 320px;
+    padding: 24px;
+  }
+
+  /* Make buttons feel normal on desktop */
+  .button {
+    font-size: 1.4rem;
+    height: 3em;
+    width: 3em;
+  }
+}
+
+
+
+@media (max-width: 430px), (max-height: 800px) {
+  #enabledDice {
+    width: min(60vw, 240px);
+    padding: 0px;
+  }
+
+  #diceRolled {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  #footer {
+    padding: 12px 0;
+  }
+
+  #buttonModifiers {
+    gap: 12px;
+  }
+
+  .button {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    height: 2.6em;
+    width: 2.6em;
+    margin: 10px 0;
+  }
+}

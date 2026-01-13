@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dice Roller</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <div id="header">
+            <img src="dice-images/diceFilled/d20-filled.png" alt="d20" class="dice" id="dice1" data-type="d20">
+            <img src="dice-images/diceFilled/d12-filled.png" alt="d12" class="dice" id="dice2" data-type="d12">
+            <img src="dice-images/diceFilled/d8-filled.png" alt="d8" class="dice" id="dice3" data-type="d8">
+            <img src="dice-images/diceFilled/d6-filled.png" alt="d6" class="dice" id="dice4" data-type="d6">
+            <img src="dice-images/diceFilled/d4-filled.png" alt="d4" class="dice" id="dice5" data-type="d4">
+        </div>
+
+        <section id="mainBody">
+            <img src="" alt="dice" id="enabledDice" class="dice" height="200" width="200">
+            <h1 id="diceRolled">--</h1>
+        </section>
+
+        <section id="footer">
+            <h2 id="modifierText">Modifiers</h2>
+
+            <hr>
+
+            <div id="buttonModifiers">
+                <button id="plus1" class="button">+1</button>
+                <button id="plus2" class="button">+2</button>
+                <button id="plus3" class="button">+3</button>
+                <button id="plus4" class="button">+4</button>
+                <button id="plus5" class="button">+5</button>
+                <button id="plus6" class="button">+6</button>
+                <button id="plus7" class="button">+7</button>
+                <button id="plus8" class="button">+8</button>
+                <button id="plus9" class="button">+9</button>
+                <button id="plus10" class="button">+10</button> 
+            </div>
+
+        </section>
+
+        <!-- JavaScript link -->
+        <script src="script.js"></script>
+    </body>
+</html>
