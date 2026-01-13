@@ -20,9 +20,10 @@ html {
 }
 
 .dice{
-    height: 100%;
-    width: 100%;
-}
+    height: auto;
+    width: clamp(36px, 10vw, 70px);
+    flex: 0 0 auto;
+  }
 
 #mainBody {
     display: flex;
@@ -150,3 +151,4 @@ hr {
     margin: 10px 0;
   }
 }
+
