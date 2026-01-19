@@ -14,9 +14,10 @@ currentDice.alt = diceList[0].alt;
 
 // Dice Changer
 function diceSelect(event){
-    currentDice.src = event.target.src;
-    currentDice.dataset.type = event.target.dataset.type;
-    currentDice.alt = event.target.alt;
+    currentDice.src = event.target.src;                     // Image of dice
+    currentDice.dataset.type = event.target.dataset.type;   // data-type: "d20"
+    currentDice.alt = event.target.alt;                     // alt type: "d20"
+    currentRoll.innerHTML = "--";
 }
 
 for(let i = 0; i < diceList.length; i++){
@@ -57,14 +58,17 @@ function rollType(){
 currentDice.addEventListener("click", rollType);
 
 
-// TO-DO: Add modifier to dice total roll 
+// Add Modifier to total dice roll
 const modifierList = document.querySelectorAll(".button")
 
 for(let i = 0; i < modifierList.length; i++){
     modifierList[i].addEventListener("click", function() {
-        currentRoll.innerHTML = Number(currentRoll.innerHTML) + (i + 1);
+        if(currentRoll.innerHTML != "--"){
+            currentRoll.innerHTML = Number(currentRoll.innerHTML) + (i + 1);
+        }
     });
 }
+
 
 
 
